@@ -1,0 +1,65 @@
+# Temporary files and folders
+temp/
+tmp/
+*.tmp
+*.log
+*.bak
+*.swp
+*.swo
+*.out
+*.err
+*.old
+logs/
+log/
+
+# System-specific files
+*.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Crash dumps
+*.dmp
+*.stackdump
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Python virtual environments and testing
+.venv/
+venv/
+ENV/
+env/
+.env
+.ENV/
+.pytest_cache/
+.mypy_cache/
+.tox/
+.coverage
+coverage.xml
+htmlcov/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+*.ipynb_checkpoints/
+.ipython/
+profile_default/
+
+# Python wheels and eggs
+*.egg-info/
+*.egg
+dist/
+build/
+
+# Environment and secrets
+*.env.local
+.env.*.local
+secrets.yaml
+config.local.yaml
+
+# Data and output files
+data/
+output/
