@@ -1,0 +1,44 @@
+---
+globs: *.ipynb, *.py, *.deepnote
+alwaysApply: false
+---
+
+# Python Environment Setup Rule
+
+**CRITICAL: Never run `pip install` commands in agent mode before properly setting up the Python environment.**
+
+## Required Setup Procedure
+
+When working with Python files and needing to install dependencies, ALWAYS follow this sequence:
+
+1. **Create virtual environment**: Run `python -m venv .venv`
+2. **Activate the environment**: Run `source .venv/bin/activate`
+3. **Add dependency to requirements.txt**: Update the `requirements.txt` file in the root folder with the required package
+4. **Install from requirements.txt**: Run `pip install -r requirements.txt`
+
+## Why This Matters
+
+- Ensures dependencies are installed in an isolated environment
+- Keeps track of all project dependencies in requirements.txt
+- Prevents system-wide package pollution
+- Makes the project reproducible for others
+
+## Example Workflow
+
+If you need to add `numpy` to the project:
+
+```bash
+# 1. Create venv (if not already created)
+python -m venv .venv
+
+# 2. Activate venv
+source .venv/bin/activate
+
+# 3. Add to requirements.txt
+echo "numpy==1.24.0" >> requirements.txt
+
+# 4. Install all requirements
+pip install -r requirements.txt
+```
+
+**DO NOT** run `pip install numpy` directly without following the above steps.
